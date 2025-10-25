@@ -14,8 +14,18 @@
 HEX, OCT, TRIANGLE||HEX, OCT, TRIANGLE||HEX, OCT, TRIANGLE||HEX, OCT, TRIANGLE||HEX, OCT, TRIANGLE||HEX, OCT, TRIANGLE||HEX, OCT, TRIANGLE
 
 
-сборка 
+## Сборка проекта
 
+**Сборка:**
+
+```bash
+# Создание директории для сборки
+mkdir build
 cd build
-cmake ..
-minw32-make
+
+# Конфигурация проекта
+cmake -G "MinGW Makefiles" ..
+
+# Сборка проекта
+mingw32-make
+```
