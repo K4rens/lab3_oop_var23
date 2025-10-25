@@ -27,15 +27,15 @@ class Figure {
     Figure(const std::vector<struct Point> &ps, const pointsCountFigure psC);
   
   public:
-    double square() const;
     struct Point center() const;
+    double square() const;
 
-    Figure &operator=(const Figure &other);
     Figure &operator=(Figure &&other) noexcept;
+    Figure &operator=(const Figure &other);
 
     friend std::ostream &operator<<(std::ostream &out, const Figure &f);
-    friend std::istream &operator>>(std::istream &in, Figure &f);
     friend bool operator==(const Figure &l, const Figure &r);
+    friend std::istream &operator>>(std::istream &in, Figure &f);
 
     class EmptyFigureException {};
     class IncorrectPointsCountException {};
