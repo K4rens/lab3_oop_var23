@@ -23,11 +23,11 @@ Figure &Figure::operator=(Figure &&other) noexcept {
 }
 
 
-bool isGoodPoints(const struct Point p1, const struct Point p2, const struct Point normalDelta) {
-  const struct Point currentDelta = {fabs(p1.x - p2.x), fabs(p1.y - p2.y)};
-  const bool xIsGood = fabs(currentDelta.x - normalDelta.x) < EPSILON;
-  const bool yIsGood = fabs(currentDelta.y - normalDelta.y) < EPSILON;
-  return xIsGood && yIsGood;
+bool isGoodPoints(const struct Point a, const struct Point b, const struct Point delta) {
+  const struct Point current = {fabs(a.x - b.x), fabs(a.y - b.y)};
+  const bool goodX = fabs(current.x - delta.x) < EPSILON;
+  const bool goodY = fabs(current.y - delta.y) < EPSILON;
+  return goodX && goodY;
 }
 
 
