@@ -2,9 +2,9 @@
 #include <vector>
 
 
-Figure::Figure(const pointsCountFigure pC) {
-  points.resize(static_cast<size_t>(pC));
-  for (size_t i = 0; i != points.size(); ++i) {
+Figure::Figure(const pointsCountFigure count) {
+  points.resize(static_cast<size_t>(count));
+  for (size_t i = 0; i < points.size(); ++i) {
     points[i] = {0.0, 0.0};
   }
 }
