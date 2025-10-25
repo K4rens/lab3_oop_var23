@@ -6,11 +6,12 @@
 
 
 
-struct Point _summand(const struct Point p1, const struct Point p2) {
-  struct Point result;
-  result.x = (p1.x + p2.x) * (p1.x * p2.y - p2.x * p1.y);
-  result.y = (p1.y + p2.y) * (p1.x * p2.y - p2.x * p1.y);
-  return result;
+struct Point _summand(const struct Point a, const struct Point b) {
+  struct Point res;
+  double cross = a.x * b.y - b.x * a.y;
+  res.x = (a.x + b.x) * cross;
+  res.y = (a.y + b.y) * cross;
+  return res;
 }
 
 
